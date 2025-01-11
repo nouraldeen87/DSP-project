@@ -69,6 +69,7 @@ if __name__ == "__main__":
     get_result= requests.get("https://github.com/nouraldeen87/DSP-project/blob/main/Netflix_Movies_and_TV_Shows.json")
     if get_result:
         print("Request was successful")
+        print(get_result.status_code)
         print(get_result.url)
         print(get_result.text)
     else:
