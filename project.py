@@ -67,6 +67,9 @@ if __name__ == "__main__":
     
     print(processed_movies)
 
+    print("Null values per column:")
+    print(file.isnull().sum())
+
     get_result= requests.get("https://github.com/nouraldeen87/DSP-project/blob/main/Netflix_Movies_and_TV_Shows.json")
     if get_result:
         print("Request was successful")
