@@ -51,6 +51,7 @@ if __name__ == "__main__":
 
     file.to_json("Netflix_Movies_and_TV_Shows.json", orient="records")
     movies = pd.read_json("Netflix_Movies_and_TV_Shows.json")
+    print(movies.isnull())
     movies.set_index("title", inplace=True)
 
     # Split DataFrame into chunks
